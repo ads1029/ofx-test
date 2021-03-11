@@ -1,19 +1,23 @@
 import React from "react";
 
-export default function CurrencyRow() {
-  const currencyOptions = [
-    ["AUD", "Australian Dollar"],
-    ["CNY", "Chinese Yuan"],
-    ["USD", "United States Dollar"],
-  ];
+export default function CurrencyRow(props) {
+  const { currency, onChangeCurrency } = props;
+
+  const currencyOptions = ["AUD", "USD", "CNY"];
+
+  const currencyHash = {
+    AUD: "Australian Dollar",
+    CNY: "Chinese Yuan",
+    USD: "United States Dollar",
+  };
 
   return (
     <div>
       {/* <input type="number" className="input" /> */}
-      <select>
+      <select value={currency} onChange={onChangeCurrency}>
         {currencyOptions.map((e) => (
-          <option value={e[0]} key={e[0]}>
-            {e[1]} ({e[0]})
+          <option value={e} key={e}>
+            {currencyHash[e]} ({e})
           </option>
         ))}
       </select>
