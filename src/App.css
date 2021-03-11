@@ -1,38 +1,67 @@
-/* .App {
-  text-align: center;
+.wrapper {
+  /* background-color: rgb(240, 249, 255); */
+  margin: 0;
+  display: grid;
+  grid-template-areas:
+    "quote ."
+    "firstName lastName"
+    "email email"
+    "phone phone"
+    "from to"
+    "amount amount"
+    "btn .";
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.test {
+  border: 1px solid red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.required {
+  color: red;
+  font-size: 1.2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p {
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+#normalRequired {
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+#firstName {
+  grid-area: firstName;
+}
+
+#lastName {
+  grid-area: lastName;
+}
+
+#email {
+  grid-area: email;
+}
+
+#phone {
+  grid-area: phone;
+}
+
+#from {
+  grid-area: from;
+}
+
+#to {
+  grid-area: to;
+}
+
+#amount {
+  grid-area: amount;
+}
+
+#quote {
+  grid-area: quote;
+}
+#btn {
+  grid-area: btn;
+}
