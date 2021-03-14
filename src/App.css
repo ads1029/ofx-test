@@ -19,12 +19,6 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.test {
-  /* border: 1px solid red; */
-  text-indent: inline;
-  /* color: aquamarine; */
-}
-
 .required {
   color: red;
   font-size: 1.2rem;
@@ -87,15 +81,13 @@ h4 {
 .result {
   align-items: center;
   justify-content: center;
-  /* text-align: center; */
+
   width: 40%;
   margin: 0 auto;
 }
 
 input {
   width: 80%;
-  /* max-width: 65%; */
-  /* height: 2rem; */
   font-size: 2rem;
 }
 
@@ -105,15 +97,12 @@ option {
 }
 
 select {
-  /* overflow: hidden; */
   font-size: 1.5rem;
-  /* height: 2.rem; */
 }
 
 #phone div {
-  /* background-color: red; */
   display: flex;
-  /* justify-content: center; */
+
   align-items: top;
 }
 

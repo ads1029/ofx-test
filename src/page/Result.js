@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import CurrencyContext from "./CurrencyContext";
 import getExchange from "../api/getExchange";
@@ -16,11 +16,6 @@ export default function Result() {
     setRate(obj.rate);
     setToAmount(obj.toAmount);
   });
-  // todo useEffect to fetch API (or not?)
-  // useEffect(() => {
-  //   // todo check if from = to
-  //   convert(fromCurrency, toCurrency, fromAmount);
-  // }, []);
 
   return (
     <div>

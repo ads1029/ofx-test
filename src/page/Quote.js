@@ -1,17 +1,16 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Link, withRouter } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { withRouter } from "react-router-dom";
 
 import InfoRow from "./InfoRow";
 import MobileRow from "./MobileRow";
 import CurrencyRow from "./CurrencyRow";
 import CurrencyContext from "./CurrencyContext";
 
-function Quote() {
+function Quote({ history }) {
   const CurrencyValue = useContext(CurrencyContext);
   const [lastName, setLastName] = useState("");
   const [firstName, setFirstName] = useState("");
 
-  // console.log(CurrencyValue);
   const {
     amount,
     setAmount,
@@ -26,9 +25,12 @@ function Quote() {
       alert("Please input first name");
     } else if (!lastName) {
       alert("Please input last name");
+    } else if (fromCurrency === toCurrency) {
+      alert("Please select different currency");
+    } else if (amount * 1 <= 0) {
+      alert("Please input the correct amount");
     } else {
-      alert("Pass!");
-      // history.push("/result")
+      history.push("/result");
     }
   };
 
@@ -43,7 +45,6 @@ function Quote() {
             onChange={(e) => {
               setFirstName(e.target.value);
             }}
-            // onChange={}
           />
         </div>
       </div>
@@ -70,8 +71,6 @@ function Quote() {
         <p className="required">*</p>
 
         <CurrencyRow
-          // currency={fromCurrency}
-          // onChangeCurrency={(e) =}
           currency={fromCurrency}
           onChangeCurrency={(e) => setFromCurrency(e.target.value)}
         />
@@ -80,8 +79,6 @@ function Quote() {
         <p>to currency</p>
         <p className="required">*</p>
         <CurrencyRow
-          // currency={toCurrency}
-          // onChangeCurrency={(e) => setToCurrency(e.target.value)}
           currency={toCurrency}
           onChangeCurrency={(e) => setToCurrency(e.target.value)}
         />
@@ -99,9 +96,7 @@ function Quote() {
       </div>
 
       <div id="btn" className="btn" onClick={checkValidation}>
-        <Link to="/result" style={{ textDecoration: "none" }}>
-          <h4>GET QUOTE</h4>
-        </Link>
+        <h4>GET QUOTE</h4>
       </div>
     </div>
   );

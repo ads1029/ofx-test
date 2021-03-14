@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Result from "./page/Result";
 import Quote from "./page/Quote";
-// import SignIn from "./Sign";
+
 import CurrencyContext from "./page/CurrencyContext";
 
 function App() {
