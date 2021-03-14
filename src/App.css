@@ -1,16 +1,27 @@
-/* .App {
-  text-align: center;
+:root {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+  /* background-color: rgb(240, 249, 255); */
+  margin: 0;
+  display: grid;
+  grid-template-areas:
+    "firstName lastName"
+    "email email"
+    "phone phone"
+    "from to"
+    "amount amount"
+    "btn btn";
+  gap: 1rem;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.required {
+  color: red;
+  font-size: 1.2rem;
 }
 
 .App-header {
@@ -28,11 +39,105 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+#firstName {
+  grid-area: firstName;
+}
+
+#lastName {
+  grid-area: lastName;
+}
+
+#email {
+  grid-area: email;
+}
+
+#phone {
+  grid-area: phone;
+}
+
+#from {
+  grid-area: from;
+}
+
+#to {
+  grid-area: to;
+}
+
+#amount {
+  grid-area: amount;
+}
+
+#quote {
+  grid-area: quote;
+}
+#btn {
+  grid-area: btn;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-align: center;
+  background-color: rgb(72, 122, 170);
+  color: white;
+  border-radius: 3rem;
+  margin: 1rem 40% 0;
+  padding: 1rem 0;
+}
+
+.result {
+  align-items: center;
+  justify-content: center;
+
+  width: 40%;
+  margin: 0 auto;
+}
+
+input {
+  width: 80%;
+  font-size: 2rem;
+}
+
+option {
+  font-size: 1.5rem;
+  height: 5rem;
+}
+
+select {
+  font-size: 1.5rem;
+}
+
+#phone div {
+  display: flex;
+
+  align-items: top;
+}
+
+#phone input {
+  width: 100%;
+  margin-right: 9.5%;
+}
+#email input {
+  width: 90%;
+}
+
+#amountInput {
+  width: 90%;
+}
+
+.resultRate {
+  color: rgb(120, 174, 152);
+  text-align: center;
+}
+
+.resultAmount {
+  color: rgb(88, 116, 144);
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.resultCurrency {
+  font-size: 30px;
+  font-weight: 300;
+  margin-right: 0.5rem;
+}
