@@ -4,10 +4,12 @@ This project is built for the coding test of OFX - Frontend Developer role.\
 The aim of this project is to create a responsive currency converter SPA with the API which is provided by OFX.\
 The layout of the app refereces the sample layout that is provided by OFX.
 
-The whole project is implemented on pure react/JS/CSS way without using any extra third party libraries.\
+The whole project is implemented on pure react/JS/CSS way without using any extra third party libraries to achieve most of the functionalities.\
 ESlint and Prettier are added to enhance the efficiency, they are also excelent for seting up code standard in team work.\
 
 React router is added to achieve routing.
+
+Some unit tests are added to ensure the code runs as expected.
 
 <img width="854" alt="iShot2021-03-14 17 26 16" src="https://user-images.githubusercontent.com/30839443/111059558-aaeffb80-84ea-11eb-9168-6a50aad01d32.png">
 
