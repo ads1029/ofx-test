@@ -59,7 +59,7 @@ function Quote({ history }) {
         </div>
       </div>
       <div id="email" className="title">
-        <p>email</p>
+        <p>Email</p>
         <InfoRow />
       </div>
       <div id="phone" className="title">
