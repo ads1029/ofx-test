@@ -2,42 +2,37 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
-import Result from "./Result";
-import Quote from "./Quote";
+import Result from "./page/Result";
+import Quote from "./page/Quote";
+// import SignIn from "./Sign";
+import CurrencyContext from "./page/CurrencyContext";
 
-// ! Adding context
-export const Context = React.createContext();
 function App() {
-  // const [fromAmount, setFromAmount] = useState("10000");
+  const [amount, setAmount] = React.useState("1000");
+  const [fromCurrency, setFromCurrency] = React.useState("AUD");
+  const [toCurrency, setToCurrency] = React.useState("GBP");
 
-  // let fromAmount = "100000";
-  // let fromCurrency = "AUD";
-  // let toCurrency = "USD";
+  const currencyValue = {
+    amount,
+    setAmount,
+    fromCurrency,
+    setFromCurrency,
+    toCurrency,
+    setToCurrency,
+  };
 
   return (
-    <Router>
-      <div className="App">
-        <Context.Provider value={["10000", "AUD", "USD"]}>
+    <CurrencyContext.Provider value={currencyValue}>
+      <Router>
+        <div className="App">
           <h1 id="quote">Quick Quote</h1>
           <Switch>
-            <Route path="/" exact>
-              <Quote
-              // fromAmount={fromAmount}
-              // fromCurrency={fromCurrency}
-              // toCurrency={toCurrency}
-              />
-            </Route>
-            <Route path="/result">
-              <Result
-              // fromAmount={fromAmount}
-              // fromCurrency={fromCurrency}
-              // toCurrency={toCurrency}
-              />
-            </Route>
+            <Route path="/" exact component={Quote}></Route>
+            <Route path="/result" component={Result}></Route>
           </Switch>
-        </Context.Provider>
-      </div>
-    </Router>
+        </div>
+      </Router>
+    </CurrencyContext.Provider>
   );
 }
 

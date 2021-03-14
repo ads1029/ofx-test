@@ -3,12 +3,15 @@ import React from "react";
 export default function CurrencyRow(props) {
   const { currency, onChangeCurrency } = props;
 
-  const currencyOptions = ["AUD", "USD", "CNY"];
+  const currencyOptions = ["AUD", "USD", "GBP", "EUR", "CAD", "JPY"];
 
   const currencyHash = {
     AUD: "Australian Dollar",
-    CNY: "Chinese Yuan",
+    GBP: "British Pound",
     USD: "United States Dollar",
+    JPY: "Japanese Yen",
+    CAD: "Canadian Dollar",
+    EUR: "Euro",
   };
 
   return (

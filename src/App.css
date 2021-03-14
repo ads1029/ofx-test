@@ -1,21 +1,28 @@
+:root {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
 .wrapper {
   /* background-color: rgb(240, 249, 255); */
   margin: 0;
   display: grid;
   grid-template-areas:
-    "quote ."
     "firstName lastName"
     "email email"
     "phone phone"
     "from to"
     "amount amount"
-    "btn .";
+    "btn btn";
+  gap: 1rem;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
 
 .test {
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  text-indent: inline;
+  /* color: aquamarine; */
 }
 
 .required {
@@ -64,4 +71,77 @@ p {
 }
 #btn {
   grid-area: btn;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 200;
+  text-align: center;
+  background-color: rgb(72, 122, 170);
+  color: white;
+  border-radius: 3rem;
+  margin: 1rem 40% 0;
+  padding: 1rem 0;
+}
+
+.result {
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+  width: 40%;
+  margin: 0 auto;
+}
+
+input {
+  width: 80%;
+  /* max-width: 65%; */
+  /* height: 2rem; */
+  font-size: 2rem;
+}
+
+option {
+  font-size: 1.5rem;
+  height: 5rem;
+}
+
+select {
+  /* overflow: hidden; */
+  font-size: 1.5rem;
+  /* height: 2.rem; */
+}
+
+#phone div {
+  /* background-color: red; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: top;
+}
+
+#phone input {
+  width: 100%;
+  margin-right: 9.5%;
+}
+#email input {
+  width: 90%;
+}
+
+#amountInput {
+  width: 90%;
+}
+
+.resultRate {
+  color: rgb(120, 174, 152);
+  text-align: center;
+}
+
+.resultAmount {
+  color: rgb(88, 116, 144);
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.resultCurrency {
+  font-size: 30px;
+  font-weight: 300;
+  margin-right: 0.5rem;
 }
