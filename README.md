@@ -1,10 +1,10 @@
 # Propose of this project:
 
-This project is built for the coding test of OFX - Frontend Developer role.
-The aim of this project is to create a currency converter SPA with the API which is provided by OFX.
-The layout of the app refereces the sample layout that is provided by OFX.
-The whole project is implemented on pure react/JS/CSS way without using any extra third party libraries.
-ESlint and Prettier are added to enhance the efficiency, they are also excelent for seting up code standard in team work.
+This project is built for the coding test of OFX - Frontend Developer role.\
+The aim of this project is to create a currency converter SPA with the API which is provided by OFX.\
+The layout of the app refereces the sample layout that is provided by OFX.\
+The whole project is implemented on pure react/JS/CSS way without using any extra third party libraries.\
+ESlint and Prettier are added to enhance the efficiency, they are also excelent for seting up code standard in team work.\
 
 ## Available Scripts
 
