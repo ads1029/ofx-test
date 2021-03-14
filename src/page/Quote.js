@@ -36,7 +36,7 @@ function Quote({ history }) {
 
   return (
     <div className="wrapper">
-      <div id="firstName" className="test">
+      <div id="firstName" className="title">
         <p>First Name </p> <p className="required">*</p>
         <div>
           <input
@@ -48,8 +48,8 @@ function Quote({ history }) {
           />
         </div>
       </div>
-      <div id="lastName" className="test">
-        <p>Last Name</p> <p className="required">*</p>
+      <div id="lastName" className="title">
+        <p className="title">Last Name</p> <p className="required">*</p>
         <div>
           <input
             type="text"
@@ -58,15 +58,15 @@ function Quote({ history }) {
           />
         </div>
       </div>
-      <div id="email" className="test">
+      <div id="email" className="title">
         <p>email</p>
         <InfoRow />
       </div>
-      <div id="phone" className="test">
+      <div id="phone" className="title">
         <p>Phone</p>
         <MobileRow />
       </div>
-      <div id="from" className="test">
+      <div id="from" className="title">
         <p>from currency</p>
         <p className="required">*</p>
 
@@ -75,15 +75,15 @@ function Quote({ history }) {
           onChangeCurrency={(e) => setFromCurrency(e.target.value)}
         />
       </div>
-      <div id="to" className="test">
-        <p>to currency</p>
+      <div id="to" className="title">
+        <p className="title">to currency</p>
         <p className="required">*</p>
         <CurrencyRow
           currency={toCurrency}
           onChangeCurrency={(e) => setToCurrency(e.target.value)}
         />
       </div>
-      <div id="amount" className="test">
+      <div id="amount" className="title">
         <p>Amount</p>
         <p className="required">*</p>
         <br />

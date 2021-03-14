@@ -24,6 +24,9 @@
   font-size: 1.2rem;
 }
 
+.title {
+  white-space: nowrap;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
